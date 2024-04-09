@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins";
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+nav {
+  background: #f2f2f2;
+  height: 80px;
+  width: 100%;
+}
+
+.logo img {
+  position: absolute;
+  padding-left: 20px;
+  top: 6px;
+  width: 200px;
+  align-items: center;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  /* text-transform: uppercase; */
+}
+
+nav a.active,
+.effect:hover {
+  background: #FD7921;
+  transition: .3s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: #333;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.main-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.main-container h1 {
+  width: 100%;
+  color: #333;
+  font-size: 3.5em;
+}
+
+.main-container p {
+  color: #555;
+  margin-top: 20px;
+  line-height: 23px;
+}
+
+/* Set Background Image */
+.background-image {
+  background-image: url('images/bg.png');
+  /* Replace with the path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  /* Set the desired height */
+  margin-top: 20px;
+  position: relative;
+}
+
+/* Overlay to improve text visibility on the background image */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(160, 160, 160, 0.542);
+  /* Adjust the opacity as needed */
+}
+
+/* Cards section */
+
+.first .about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0 20px 0;
+  font-size: 2.5em;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  width: 33%;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 5px 15px rgba(2, 2, 2, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 60vh;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-content h2 {
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  color: #555;
+  text-align: left;
+}
+
+.column {
+  flex: 1;
+}
+
+.column ul li {
+  list-style-type: none;
+}
+
+.column ul li a {
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+}
+
+.column ul li a:hover {
+  text-decoration: underline;
+}
+
+
+/* Contact Section Styles */
+.contact-section {
+  padding-top: 10px;
+}
+
+.contact-section p {
+  margin: 5px 0;
+}
+
+/* service section */
+
+.services {
+  width: 100%;
+  /* background-color: #ededed; */
+  outline: 4px solid white;
+}
+
+.service-wrapper {
+  padding: 5% 8%;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  font-size: 2.5em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+  margin-top: 80px;
+}
+
+.cardAll {
+  height: 350px;
+  width: 370px;
+  background-color: #FD7921;
+  padding: 3% 8%;
+  border: 0.2px solid #b8cedd;
+  border-radius: 8px;
+  transition: 0.6s;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardAll::after {
+  content: "";
+  position: absolute;
+  top: 150%;
+  left: -200px;
+  width: 120%;
+  transform: rotate(50deg);
+  background-color: #fff;
+  height: 18px;
+  filter: blur(30px);
+  opacity: 0.5;
+  transition: 1s;
+}
+
+.cardAll:hover:after {
+  width: 225%;
+  top: -100%;
+}
+
+.cardAll i {
+  color: #ededed;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 4.8rem;
+  transition: 1s;
+}
+
+.cardAll h2 {
+  font-size: 20px;
+  font-weight: 600px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.cardAll p {
+  text-align: left;
+  width: 100%;
+  margin: 12px 0;
+  color: #fff;
+}
+
+.cardAll:hover {
+  /* background-color: transparent; */
+  transform: translateY(-8px);
+  border-color: #333;
+}
+
+.cardAll:hover i {
+  color: #333;
+}
+
+@media screen and (max-width: 900px) {
+  .cards {
+      grid-template-columns: repeat(1,1fr);
+      gap: 100;
+  }
+
+  h1 {
+      font-size: 3.5rem;
+  }
+}
+
+/* feedback section */
+
+.feedback-box {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.feedback-box {
+  font-size: 1.5em;
+  padding-bottom: 10px;
+}
+
+.feedback-box .feed {
+  width: 100%;
+}
+
+/* Submit Button Styles */
+.submit-button {
+  background-color: #FD7921;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit-button:hover {
+  background-color: #f8904b;
+}
+
+/* footer section */
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  font-size: 1.8em;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+footer .foot {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .last {
+  text-align: center;
+}
+
+form {
+  max-width: 600px;
+  margin: 16px auto 0 auto;
+  padding: 0 20px;
+}
+
+input,
+textarea {
+  min-width: 60%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.one {
+  background-color: #FD7921;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.one:hover {
+  background-color: #f8904b;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 20px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #ffffff;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 2;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  .effect:hover,
+  naV a.active {
+    margin: 0;
+    padding: 8px 38%;
+    width: 100%;
+    background: #FD7921;
+    color: #fff;
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .card-container {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 70%;
+  }
+
+  .card img {
+    height: auto;
+  }
+
+  .main-container h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and all (max-width: 500px; ) {
+
+  form input,
+  textarea {
+    width: 55px;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav a {
+    border-bottom: 1px solid #777;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  footer .foot {
+    flex-wrap: wrap;
+  }
+
+}
+
+@media (max-width: 560px) {
+
+  .third input {
+    width: 100%;
+  }
+
+  .third textarea {
+    min-width: 70%;
+  }
+}
